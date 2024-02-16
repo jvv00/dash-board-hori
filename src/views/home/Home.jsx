@@ -5,12 +5,16 @@ import { Box,  SimpleGrid,  VStack } from "@chakra-ui/react";
 import IconBox from "../../components/icons/IconBox";
 import { FaChartSimple, FaDollarSign } from "react-icons/fa6";
 import { LiaFlagUsaSolid } from "react-icons/lia";
-import { MdAddTask, MdOutlineTask } from "react-icons/md";
+import { MdAddTask, MdOutlineEditCalendar, MdOutlineTask } from "react-icons/md";
 import TotalSpent from "./components/TotalSpent";
 import Weekly from "./components/Weekly";
 import CheckTable from "./components/CheckTable";
 import DailyTraffic from "./components/DailyTraffic";
 import PieCard from "./components/PieCard";
+import ReactTable from "./components/ReactTable";
+import ComplexTable from "./components/ComplexTable";
+import CalendarCustom from "./components/Calendar";
+import Tasks from "./components/Tasks";
 
 const Home = () => {
     return (
@@ -67,16 +71,10 @@ const Home = () => {
                 </SimpleGrid>
             </SimpleGrid>
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
-                <Box bg="tomato" height="80px">
-                    1
-                </Box>
+                 <ComplexTable/>
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
-                    <Box bg="tomato" height="80px">
-                        1
-                    </Box>
-                    <Box bg="tomato" height="80px">
-                        1
-                    </Box>
+                    <Tasks/>
+                    <CalendarCustom/>
                 </SimpleGrid>
             </SimpleGrid>
         </VStack>

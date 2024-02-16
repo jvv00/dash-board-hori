@@ -27,7 +27,7 @@ const PieCard = () => {
             mt='15px'>
                 <Flex direction={"column"} >
                 <Flex pb={2} align={"center"}>
-                <Box w={"8px"} h={"8px"} borderRadius={"50%"} bg={"blue"} me='4px'/>
+                <Box w={"8px"} h={"8px"} borderRadius={"50%"} bg={"brandScheme.500"} me='4px'/>
                 <Text  color={"gray.400"} fontSize={"12px"} fontWeight={700}>
                     Your files
                 </Text>

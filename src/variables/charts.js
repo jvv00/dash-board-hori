@@ -98,7 +98,7 @@ export const barChartOptionsDailyTraffic = {
   plotOptions: {
     bar: {
       borderRadius: 10,
-      columnWidth: "40px",
+      columnWidth: "20px",
     },
   },
 };
@@ -202,8 +202,9 @@ export const barChartOptionsConsumption = {
   },
   plotOptions: {
     bar: {
-      borderRadius: 10,
-      columnWidth: "20px",
+      // borderRadius: 0,
+      // borderRadiusApplication: 'around',
+      columnWidth: "15px",
     },
   },
 };

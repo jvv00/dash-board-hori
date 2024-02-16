@@ -1,6 +1,6 @@
 import { mode } from '@chakra-ui/theme-tools'
 import { lighten } from 'polished'
-
+import '../../src/assets/css/style.css'
 export const variablesC = {
     $maxW: '1280px',
 }
@@ -34,6 +34,17 @@ export const globalStyles = {
             800: '#1F2937',
             900: '#111827',
         },
+        brandScheme: {
+            100: "#E9E3FF",
+            200: "#7551FF",
+            300: "#7551FF",
+            400: "#7551FF",
+            500: "#422AFB",
+            600: "#3311DB",
+            700: "#02044A",
+            800: "#190793",
+            900: "#02044A",
+          },
     },
     styles: {
         global: (props) => ({
