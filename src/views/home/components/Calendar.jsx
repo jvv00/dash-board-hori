@@ -13,9 +13,9 @@ const CalendarCustom = (props) => {
       align='center'
       direction='column'
       w='100%'
-      maxW='max-content'
+      // maxW='max-content'
       p='20px 15px'
-      h='max-content'
+      h='100%'
       {...rest}>
       <Calendar
         onChange={onChange}

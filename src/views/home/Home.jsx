@@ -63,14 +63,14 @@ const Home = () => {
                 <TotalSpent/>
                 <Weekly/>
             </SimpleGrid>
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
+            <SimpleGrid columns={{ base: 1, md: 1, xl: 2 }} spacing="20px" w={'100%'}>
                 <CheckTable/>
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
                     <DailyTraffic/>
                     <PieCard/>
                 </SimpleGrid>
             </SimpleGrid>
-            <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
+            <SimpleGrid columns={{ base: 1, md: 1, xl: 2}} spacing="20px" w={'100%'}>
                  <ComplexTable/>
                 <SimpleGrid columns={{ base: 1, md: 2 }} spacing="20px" w={'100%'}>
                     <Tasks/>

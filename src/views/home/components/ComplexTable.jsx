@@ -1,9 +1,12 @@
-import { Box, Card, CardHeader, Flex, Icon, Progress, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
+import { Box, Card, CardHeader, Flex, Icon, IconButton, Menu, MenuButton, MenuItem, MenuList, Progress, Table, TableContainer, Tbody, Td, Th, Thead, Tr } from "@chakra-ui/react"
 import React, { useMemo } from "react"
 import { tableDataComplex } from "../../../variables/tables"
 import { useSortBy, useTable } from "react-table"
-import { FaCircleCheck, FaCircleExclamation, FaCircleXmark, } from "react-icons/fa6";
+import { FaCircleCheck, FaCircleExclamation, FaCircleXmark, FaRegUser, } from "react-icons/fa6";
 import { TitleH2 } from "../../../components/common/Title";
+import { MdLightbulbOutline, MdMoreHoriz, MdOutlineSettings } from "react-icons/md";
+import { AddIcon, EditIcon, ExternalLinkIcon, RepeatIcon } from "@chakra-ui/icons";
+import { IoBriefcaseOutline } from "react-icons/io5";
 
 const ComplexTable = () => {
     const data = React.useMemo(
@@ -55,7 +58,32 @@ const ComplexTable = () => {
 
     return (
         <Card>
-        <CardHeader><TitleH2>Complex Table</TitleH2></CardHeader>
+        <CardHeader>
+            <Flex  px='25px' justify='space-between' mb='20px' align='center'>
+            <TitleH2>Complex Table</TitleH2>
+            <Menu>
+                <MenuButton
+                    as={IconButton}
+                    aria-label='Options'
+                    icon={<MdMoreHoriz color="brandScheme.500" fontSize={"24px"}/>}
+                />
+                 <MenuList>
+                    <MenuItem icon={<FaRegUser />}>
+                    Panel1
+                    </MenuItem>
+                    <MenuItem icon={<IoBriefcaseOutline/> }>
+                    Panel2
+                    </MenuItem>
+                    <MenuItem icon={<MdLightbulbOutline/>}>
+                    Panel3
+                    </MenuItem>
+                    <MenuItem icon={<MdOutlineSettings />}>
+                    Panel4
+                    </MenuItem>
+                </MenuList>
+            </Menu>
+            </Flex>
+            </CardHeader>
         <TableContainer>
             <Table variant="simple" {...getTableProps()}>
                 <Thead>
