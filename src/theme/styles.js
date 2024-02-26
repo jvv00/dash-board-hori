@@ -2,7 +2,7 @@ import { mode } from '@chakra-ui/theme-tools'
 import { lighten } from 'polished'
 import '../../src/assets/css/style.css'
 export const variablesC = {
-    $maxW: '1280px',
+    $maxW: '80rem',
 }
 
 export const globalStyles = {
@@ -46,19 +46,27 @@ export const globalStyles = {
             900: "#02044A",
           },
     },
+    radii: {
+        none: '0',
+        sm: '.5rem',
+        md: '.75rem',
+        lg: '1rem',
+        xl: '1.25rem',
+        full: '9999px',
+    },
     styles: {
         global: (props) => ({
             body: {
-                minW: '330px',
+                minW: '20.625rem',
                 // overflowX: 'hidden',
                 bg: mode('bgDefault', 'navy.900')(props),
                 fontFamily: '"DM Sans", "sans-serif"',
-                letterSpacing: '-0.5px',
-                fontSize: '16px',
+                letterSpacing: '-0.0313rem',
+                fontSize: '1rem',
                 fontWeight: '400',
                 lineHeight: '1.5',
                 color: mode('gray.900', 'white')(props),
-                // bg: 'url("/-bg/pc.png") no-repeat 0 0 / 1790px auto',
+                // bg: 'url("/-bg/pc.png") no-repeat 0 0 / 111.875rem auto',
             },
             '#root': {
                 // opacity: 0.7,
@@ -73,7 +81,7 @@ export const globalStyles = {
                 listStyle: 'none',
             },
             '.chakra-container': {
-                // maxWidth: 'calc(1280px + var(--chakra-space-4) * 2) !important',
+                // maxWidth: 'calc(80rem + var(--chakra-space-4) * 2) !important',
             },
 
         }),

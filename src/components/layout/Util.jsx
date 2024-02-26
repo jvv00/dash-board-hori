@@ -10,7 +10,9 @@ const Util = () => {
         mt={2}
         px={2}
         borderRadius={61}
-        boxShadow={'0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)'}>
+        boxShadow={'0 20px 25px -5px var(--tw-shadow-color),0 8px 10px -6px var(--tw-shadow-color)'}
+        zIndex={1200}
+    >
             <InputGroup w="50%">
                 <InputLeftElement >
                     <IconButton
