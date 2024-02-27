@@ -1,8 +1,8 @@
-import { Box, Flex, Grid, GridItem, Image, Link, SimpleGrid, Tab, TabList, TabPanel, TabPanels, Tabs, useColorModeValue } from "@chakra-ui/react";
+import { Box, Button, Card, Flex, Grid, GridItem, Image, Link, SimpleGrid, Tab, TabList, TabPanel, TabPanels, Tabs, useColorModeValue } from "@chakra-ui/react";
 import Layout from "../../components/layout/Layout";
 import Banner from "./components/Banner";
 import NFT from "./components/NFT";
-import { TitleH3 } from '../../components/common/Title'
+import { TitleH2, TitleH3 } from '../../components/common/Title'
 // import { motion } from "framer-motion";
 import Nft1 from "../../assets/images/Nft1.png";
 import Nft2 from "../../assets/images/Nft2.png";
@@ -11,6 +11,8 @@ import Avatar1 from "../../assets/images/avatars/avatar1.png";
 import Avatar2 from "../../assets/images/avatars/avatar2.png";
 import Avatar3 from "../../assets/images/avatars/avatar3.png";
 import Avatar4 from "../../assets/images/avatars/avatar4.png";
+import TopCreatorTable from "./components/TopCreatorTable";
+import History from "./components/History";
 
 const Marketplace = () => {
     const textColor = useColorModeValue("navy.700", "white");
@@ -24,7 +26,7 @@ const Marketplace = () => {
                 <Banner/>
                 <Flex
                 flexDirection='column'
-                gap={10}>
+                gap={10} mb={'20px'}>
                     <Box>
                     <Flex
                         mt='45px'
@@ -106,13 +108,85 @@ const Marketplace = () => {
                     </Box>
                     <Box>
                         <TitleH3>Recently Added</TitleH3>
-                        <Box w="100%" h="100" bg="blue.500"></Box>
+                        <SimpleGrid columns={{ base: 1, md: 3 }} gap='20px'>
+                        <NFT 
+                        name='Abstract Colors'
+                        author="By Esthera Jackson"
+                        bidders={[
+                        Avatar1, 
+                        Avatar2, 
+                        Avatar3, 
+                        Avatar4,
+                        Avatar4,
+                        Avatar4,
+                    ]}
+                        image={Nft1}
+                        currentbid='0.91 ETH'
+                        download='#'
+                        />
+                        <NFT 
+                        name='ETH AI Brain'
+                        author="By Nick Wilson"
+                        bidders={[
+                        Avatar1, 
+                        Avatar2, 
+                        Avatar3, 
+                        Avatar4,
+                        Avatar4,
+                        Avatar4,
+                    ]}
+                        image={Nft2}
+                        currentbid='0.91 ETH'
+                        download='#'
+                        />
+                        <NFT 
+                        name='Mesh Gradients'
+                        author="By Will Smith"
+                        bidders={[
+                        Avatar1, 
+                        Avatar2, 
+                        Avatar3, 
+                        Avatar4,
+                        Avatar4,
+                        Avatar4,
+                    ]}
+                        image={Nft3}
+                        currentbid='0.91 ETH'
+                        download='#'
+                        />
+                    </SimpleGrid>
                     </Box>
                     </Flex>
                 {/* </Box> */}
             </Flex>
+            <Flex w="100%" flexDir={'column'} gap={10} mb={'20px'}>
+                {/* <Box w="100%" h="100" bg="blue.500"></Box> */}
+                <Card p={'20px 0'}>
+                <TopCreatorTable/>
+                </Card>
+            </Flex>
             <Flex w="100%" flexDir={'column'} gap={10}>
-                <Box w="100%" h="100" bg="blue.500"></Box>
+                {/* <Box w="100%" h="100" bg="blue.500"></Box> */}
+                <Card p={'20px 0'}>
+                <Flex
+            align={{ sm: "flex-start", lg: "center" }}
+            justify='space-between'
+            w='100%'
+            px='22px'
+            pb='20px'
+            mb='10px'
+            boxShadow='0px 40px 58px -20px rgba(112, 144, 176, 0.26)'>
+            <TitleH2>History</TitleH2>
+            <Button variant='action'>See all</Button>
+            </Flex>
+                <History
+                name='Abstract Colors'
+                author="By Esthera Jackson"
+                date='58s ago'
+                image={Nft1}
+                price='0.91 ETH'
+                />
+                </Card>
             </Flex>
         </Grid>
         </>

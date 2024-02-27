@@ -10,15 +10,15 @@ const Layout = (props) => {
     
     return (
         <>
-        <Box display={"flex"} flexDirection={"column"} minH={"100vh"}>
+        <Box display={"flex"} flexDirection={"column"} minH={"100vh"} >
             <Header/>
                 
             <Box
                 as="main"
                 id="main"
                 flexGrow={1}
-                pl={{ base: '12px', xl: 312 }}
-                pr={{ base: '12px', xl: '12px' }}
+                pl={{ base: '20px', md: '30px' }}
+                pr={{ base: '20px', md: '30px' }}
                 pt={{ base: 200, md: 140 }}
                 transition={'all 0.2s'}
             >                {/* {props.showTitle && <h2>{props.title}</h2>}

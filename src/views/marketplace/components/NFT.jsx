@@ -11,12 +11,13 @@ const NFT = (props) => {
         <>
         <Card p={'20px'}>
         <Flex direction={{ base: "column" }} justify='center'>
-        <Box mb={{ base: "20px", "2xl": "20px" }} position='relative' borderRadius='xl' overflow={'hidden'}>
+        <Box mb={{ base: "20px", "2xl": "20px" }} position='relative' >
             <Image
                 src={image}
                 w={'100%'}
                 h={'100%'}
                 objectFit={'cover'}
+                borderRadius={'xl'}
                 />
             <Button
                 variant={'link'}
@@ -28,6 +29,9 @@ const NFT = (props) => {
                 borderRadius={'full'}
                 bg={'white'}
                 color={'primary'}
+                _hover={{
+                  bg: 'rgba(255, 255, 255, 0.92)', 
+                }}
                 onClick={() => {
                     setLike(!like);
                   }}>
