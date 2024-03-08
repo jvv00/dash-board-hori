@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/dash-board-hori/static/css/main.3c88f9df.css",
+    "main.js": "/dash-board-hori/static/js/main.d40514eb.js",
+    "static/media/NftBanner1.png": "/dash-board-hori/static/media/NftBanner1.87062366f75bedd52bd2.png",
+    "static/media/Nft2.png": "/dash-board-hori/static/media/Nft2.7897c45d2601ee3adfb5.png",
+    "static/media/avatar2.png": "/dash-board-hori/static/media/avatar2.5692c39db4f8c0ea999e.png",
+    "static/media/avatar3.png": "/dash-board-hori/static/media/avatar3.9f646ac5920fa40adf00.png",
+    "static/media/avatar1.png": "/dash-board-hori/static/media/avatar1.eeef2af6dfcd3ff23cb8.png",
+    "static/media/Nft3.png": "/dash-board-hori/static/media/Nft3.3b3e6a4b3ada7618de6c.png",
+    "static/media/Nft1.png": "/dash-board-hori/static/media/Nft1.0fea34cca5aed6cad72b.png",
+    "static/media/avatar4.png": "/dash-board-hori/static/media/avatar4.54d5c1de851c273b2cd9.png",
+    "index.html": "/dash-board-hori/index.html",
+    "main.3c88f9df.css.map": "/dash-board-hori/static/css/main.3c88f9df.css.map",
+    "main.d40514eb.js.map": "/dash-board-hori/static/js/main.d40514eb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3c88f9df.css",
+    "static/js/main.d40514eb.js"
+  ]
+}
