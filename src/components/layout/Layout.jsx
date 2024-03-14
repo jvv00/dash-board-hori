@@ -17,8 +17,8 @@ const Layout = (props) => {
                 as="main"
                 id="main"
                 flexGrow={1}
-                pl={{ base: '20px', md: '30px' }}
-                pr={{ base: '20px', md: '30px' }}
+                pl={{ base: '20px', md: '30px' ,xl: 312}}
+                pr={{ base: '20px', md: '30px', xl: '12px'}}
                 pt={{ base: 200, md: 140 }}
                 transition={'all 0.2s'}
             >                {/* {props.showTitle && <h2>{props.title}</h2>}
@@ -31,7 +31,7 @@ const Layout = (props) => {
                     top={'27px'}
                     left={{ base: '12px', xl: '315px' }}
                     right={'12px'}
-                    p={2}
+                    py={2}
                     bg={'rgba(255, 255, 255, 0.1)'}
                     // bg={'red'}
                     backdropFilter={'blur(10px)'}

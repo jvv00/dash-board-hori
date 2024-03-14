@@ -1,7 +1,7 @@
 // import Layout from "../../components/layout/Layout"
 import Ministatistics from "../../components/card/MiniStatistics";
 // import MainSlide from "./components/MainSlide";
-import { Box,  SimpleGrid,  VStack } from "@chakra-ui/react";
+import { Box,  Button,  SimpleGrid,  VStack } from "@chakra-ui/react";
 import IconBox from "../../components/icons/IconBox";
 import { FaChartSimple, FaDollarSign } from "react-icons/fa6";
 import { LiaFlagUsaSolid } from "react-icons/lia";
@@ -15,11 +15,41 @@ import ReactTable from "./components/ReactTable";
 import ComplexTable from "./components/ComplexTable";
 import CalendarCustom from "./components/Calendar";
 import Tasks from "./components/Tasks";
+import React, { useEffect, useState } from "react";
+import { color } from "framer-motion";
 
 const Home = () => {
+
+    // useEffect(함수, [의존성 배열])
+    // 1. 컴포넌트가 마운트 될 때, 배경색 노란색으로 변경
+    useEffect(() => {
+        document.body.style.backgroundColor = 'yellow'
+        document.body.id = 'intro'
+        document.body.classList.add('intro')
+
+    // 2. 컴포넌트가 언마운트 될 때, 배경색 원래색으로 변경
+        return () => {
+            document.body.style.backgroundColor = ''
+            document.body.id = ''
+            document.body.classList.remove('intro')
+        }
+    }, [])
+
+    // 3. 업데이트: 버튼 클릭시 배경색 변경
+    const [color, setColor] = useState('yellow')
+    const toggleColor = () => {
+        setColor((prevColor) => (prevColor === 'yellow' ? 'lightblue' : 'yellow'))
+    }
+    // color가 변경될 때마다 함수 실행
+    // 데이터가 변경될 때마가 함수가 실행
+    useEffect(() => {
+        console.log('색상이 변경됨', color)
+    },[color])
+
     return (
         <>
         <VStack spacing={5}>
+            <Button onClick={toggleColor}>배경색 변경</Button>
             <SimpleGrid columns={{ base: 1, md: 2, lg: 3 ,"2xl" : 6}} spacing="20px" w={'100%'}>
                 <Ministatistics 
                 name="Earnings" 

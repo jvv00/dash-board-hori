@@ -10,7 +10,7 @@ import Layout, { NoneLayout } from './components/layout/Layout';
 const Routers = () => {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route path='/' element={<Home/>}/>
