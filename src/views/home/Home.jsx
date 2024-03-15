@@ -20,10 +20,11 @@ import { color } from "framer-motion";
 
 const Home = () => {
 
+    const [color, setColor] = useState('yellow')
     // useEffect(함수, [의존성 배열])
     // 1. 컴포넌트가 마운트 될 때, 배경색 노란색으로 변경
-    useEffect(() => {
-        document.body.style.backgroundColor = 'yellow'
+    useEffect(() => { 
+        document.body.style.backgroundColor = color
         document.body.id = 'intro'
         document.body.classList.add('intro')
 
@@ -33,10 +34,9 @@ const Home = () => {
             document.body.id = ''
             document.body.classList.remove('intro')
         }
-    }, [])
+    }, [color])
 
     // 3. 업데이트: 버튼 클릭시 배경색 변경
-    const [color, setColor] = useState('yellow')
     const toggleColor = () => {
         setColor((prevColor) => (prevColor === 'yellow' ? 'lightblue' : 'yellow'))
     }

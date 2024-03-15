@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom'
 import Home from './views/home/Home';
 import Marketplace from './views/marketplace/Marketplace';
 import DataTables from './views/datatables/DataTables';
@@ -10,7 +11,7 @@ import Layout, { NoneLayout } from './components/layout/Layout';
 const Routers = () => {
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path='/' element={<Layout/>}>
           <Route path='/' element={<Home/>}/>
@@ -25,7 +26,7 @@ const Routers = () => {
 
 
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 };
 
